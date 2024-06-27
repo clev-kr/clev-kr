@@ -1,5 +1,4 @@
 import "./style.css";
-import "./typescript.svg";
 
 class TypeWriter {
   constructor(txtElement: Element, words: string, wait = 3000) {
