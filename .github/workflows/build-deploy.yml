@@ -28,7 +28,7 @@ jobs:
       uses: actions/checkout@v3
     - uses: pnpm/action-setup@v2
       with:
-        version: 8
+        version: 9
     - name: Detect package manager
       id: detect-package-manager
       run: |
@@ -70,7 +70,7 @@ jobs:
     - name: Build
       run: ${{ steps.detect-package-manager.outputs.runner }} build
     - name: No jekyll build
-      run: touch out/.nojekyll
+      run: touch dist/.nojekyll
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
